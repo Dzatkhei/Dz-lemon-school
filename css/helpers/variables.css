@@ -1,0 +1,11 @@
+:root {
+	--wrapper-padding-top: 58px;
+	--header-height: 54px;
+
+	/*colors*/
+	--color_white: #fff;
+	--color_text_main: #292830;
+	--color_text_gray: #bdbdbd;
+
+	--color-accent: #ff7235;
+}

@@ -1,0 +1,150 @@
+body {
+	font-family: 'Hind Siliguri', sans-serif;
+	font-weight: 400;
+
+	color: var(--color_text_main);
+	font-size: 24px;
+}
+
+.body.body--overflow_hidden {
+	overflow: hidden;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	padding-top: var(--wrapper-padding-top);
+	min-height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	width: 100%;
+	flex-grow: 1;
+}
+
+/* section */
+
+.section {
+	width: 100%;
+	padding: 140px 0;
+}
+
+.section.section--hero {
+	min-height: calc(100dvh - var(--wrapper-padding-top) - var(--header-height));
+	display: flex;
+	align-items: center;
+}
+
+.section.section--bg {
+	background-image: url(../imgs/overview_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: var(--color-accent);
+}
+
+.section.section--bg_color {
+	background-color: #fffaf8;
+}
+
+.section.section--no_bottom_padding {
+	padding-bottom: 0;
+}
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.section__subtitle {
+	margin-bottom: 24px;
+
+	font-size: 22px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: var(--color_text_gray);
+}
+
+.section__title {
+	font-size: 96px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.section__title:has(+ .section__descr) {
+	margin-bottom: 20px;
+}
+
+.section__title.section__title--center {
+	text-align: center;
+}
+
+.section__title.section__title--size {
+	font-size: 72px;
+}
+
+.section__title.section__title--offset {
+	margin-bottom: 60px;
+}
+
+.section__descr {
+	font-size: 24px;
+	line-height: 1.58;
+	color: var(--color_text_gray);
+}
+
+.section__descr:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+/* content */
+
+.content {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.content__col {
+	width: calc(50% - 15px);
+}
+
+.content_picture {
+	max-width: 100%;
+	width: 538px;
+	height: 478px;
+}
+
+.content_picture__img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-position: center;
+	object-fit: contain;
+}
+
+.content_info {
+	display: block;
+	max-width: 100%;
+}
+
+.content_info__footer {
+	display: flex;
+	align-items: center;
+
+	column-gap: 18px;
+}
+.content_info__btn_descr {
+	font-size: 24px;
+	line-height: 1.58;
+	text-align: left;
+	color: var(--color_text_gray);
+}

@@ -1,0 +1,30 @@
+.grid_2__item img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.grid_2 {
+	display: grid;
+	gap: 15px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.grid_2__item {
+	grid-column: span 2;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.grid_2__item:nth-child(1) {
+	grid-row: span 2;
+}
+
+.grid_2__item:nth-child(5),
+.grid_2__item:nth-child(6) {
+	grid-column: auto;
+}
+

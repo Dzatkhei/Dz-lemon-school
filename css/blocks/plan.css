@@ -1,0 +1,130 @@
+.plan {
+	--colums-number: 3;
+	--column-gap: 50px;
+
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: var(--column-gap);
+	gap: 30px;
+}
+.plan_item {
+	display: flex;
+	flex-direction: column;
+
+	width: calc((100% - var(--column-gap) * (var(--colums-number) - 1)) / var(--colums-number));
+	/* width: calc((100% - 30px * 2) / 3); */
+	flex-shrink: 0;
+
+	padding: 40px 40px 60px;
+
+	background-color: var(--color_white);
+}
+
+.plan_item__icon_w {
+	height: 20px;
+	width: 20px;
+	margin-bottom: 27px;
+}
+
+.plan_item__icon {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.plan_item__title {
+	margin-bottom: 24px;
+
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+.plan_item__list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	padding-left: 32px;
+	margin-bottom: 24px;
+
+	font-size: 18px;
+}
+
+.plan_item__list_item {
+    display: grid;
+    grid-template-columns: 0 1fr;
+    align-items: start;
+    gap: 0;
+}
+
+.plan_item__list_item::before {
+    content: '';
+    width: 18px;
+    height: 14px;
+    margin-top: 7px;
+	margin-left: -32px;
+    background-image: url(../../imgs/check.svg);
+}
+
+.plan_item__price_w:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.plan_item__price {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+.plan_item__price span {
+	font-size: 20px;
+	font-weight: 300;
+	color: var(--color_text_gray);
+}
+
+.plan_item__discount {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: var(--color_text_gray);
+}
+
+.plan_item__btn_w {
+	margin-top: auto;
+}
+
+.plan_item__btn {
+	position: relative;
+	column-gap: 10px;
+	align-items: center;
+}
+
+.plan_item__btn span {
+	position: relative;
+
+	display: block;
+	width: 16px;
+	height: 8px;
+
+}
+.plan_item__btn span::after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	content: '';
+
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-accent);
+	mask-image: url(../../imgs/arrow_2.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.plan_item__btn:hover span::after {
+	background-color: var(--color_white);
+}
